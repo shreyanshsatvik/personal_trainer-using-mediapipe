@@ -1,1 +1,1 @@
-# pose-learner
+Exercise Counter with Web App
