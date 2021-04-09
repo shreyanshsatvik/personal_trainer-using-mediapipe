@@ -1,1 +1,1 @@
-Exercise Counter
+Exercise Counter with Web App
