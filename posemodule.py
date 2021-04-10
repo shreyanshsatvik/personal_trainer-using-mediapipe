@@ -5,7 +5,7 @@ import time
 
 
 class poseDetector():
-    def __init__(self,mode= False, upBody =True,smooth = True,detectionCon = 0.5,trackCon=0.5):
+    def __init__(self,mode= False, upBody =False,smooth = True,detectionCon = 0.5,trackCon=0.5):
             
 
                 self.mode = mode
