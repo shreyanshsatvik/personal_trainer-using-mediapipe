@@ -60,7 +60,7 @@ def crunches(n):
                 break
             
             
-            calories = 0.29*count
+            calories = 0.15*count
         
         
         

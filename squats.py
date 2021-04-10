@@ -62,7 +62,7 @@ def squats(n):
                 break
             
             
-            calories = 0.29*count
+            calories = 0.32*count
         
         
         
