@@ -61,7 +61,7 @@ def pullup(n):
                 break
             
             
-            calories = 0.29*count
+            calories = 1*count
         
         
         

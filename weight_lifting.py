@@ -60,7 +60,7 @@ def biceps(n):
                 break
             
             
-            calories = 0.29*count
+            calories = 0.4*count
         
         
         
