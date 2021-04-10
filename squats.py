@@ -5,7 +5,7 @@ import time
 import posemodule as pm
 import math
 
-def squats():
+def squats(n):
     pTime = 0
     path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'squats3.mp4'
     cap = cv2.VideoCapture(0)
@@ -25,7 +25,7 @@ def squats():
     count = 0
 
     f=0
-    while True:
+    while True and count < n:
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img,draw=False)
@@ -67,3 +67,5 @@ def squats():
         
         
     return count,calories
+
+squats(3)

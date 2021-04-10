@@ -5,7 +5,7 @@ import time
 import posemodule as pm
 import math
 
-def crunches():
+def crunches(n):
     pTime = 0
     path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'crunches 1.mp4'
     cap = cv2.VideoCapture(path)
@@ -25,7 +25,7 @@ def crunches():
     count = 0
 
     f=0
-    while True:
+    while True and count<n:
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img)
@@ -65,3 +65,4 @@ def crunches():
         
         
     return count,calories
+crunches(5)

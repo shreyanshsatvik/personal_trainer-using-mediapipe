@@ -5,10 +5,10 @@ import time
 import posemodule as pm
 import math
 
-def pushup():
+def pushup(n):
     pTime = 0
     path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pushup1.mp4'
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(path)
     detector = pm.poseDetector()
 
     #up3 y500
@@ -26,7 +26,7 @@ def pushup():
 
     f=0
 
-    while True:
+    while True and count<n:
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img,draw=False)
@@ -67,3 +67,4 @@ def pushup():
         
     return count,calories
 
+print(pushup(5))

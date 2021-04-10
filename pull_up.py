@@ -6,7 +6,7 @@ import posemodule as pm
 import math
 
 
-def pullup():
+def pullup(n):
     pTime = 0
     path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pullup1.mp4'
     cap = cv2.VideoCapture(path)
@@ -26,7 +26,7 @@ def pullup():
     count = 0
 
     f=0
-    while True:
+    while True and count<n:
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img,draw=False)
@@ -66,3 +66,4 @@ def pullup():
         
         
     return count,calories
+pullup(3)
