@@ -68,4 +68,3 @@ def squats(n):
         
     return count,calories
 
-squats(3)

@@ -51,11 +51,10 @@ def squats():
 
 @app.route('/pushup',methods=["POST","GET"])
 def pushups():
-    from push_up import pushup
     count=0
     calories=0
     if request.method=="POST":
-        
+        from push_up import pushup
         print("started")
         n=request.form.get('co')
         print(n)
@@ -93,10 +92,11 @@ def biceps():
 
 @app.route('/crunches',methods=["POST","GET"])
 def crunches():
-    from crunches import crunches
-    ccount=0
+    
+    count=0
     calories=0
     if request.method=="POST":
+        from crunches import crunches
         print("started")
         n=request.form.get('co')
         print(n)

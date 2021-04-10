@@ -65,4 +65,3 @@ def biceps(n):
         
         
     return count,calories
-biceps(3)

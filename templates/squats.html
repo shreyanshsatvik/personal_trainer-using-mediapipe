@@ -85,37 +85,36 @@
     <div class="gallery-area section-padding30 ">
         <div class="container-fluid ">
             <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6">
                     <div class="box snake mb-30">
-                        <form class="form-contact contact_form"  method="post" id="contactForm" novalidate="novalidate">
+                        <div></div>
+                        <form class="form-contact contact_form" method="POST"  action="">
                             <div class="row">
                                 
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="name" font-size= "50" id="name" type="text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                    
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label class="form-label" style="color:white; font-size: 40px;">Count</label>
+                                        <input type="number" class="form-control" 
+                                            name="co" style="border-radius: 10px;" >
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                <div class="col-md-12 justify-content-center">
+                                    <div class="d-grid">
+                                        <button type="submit" style="color:red; font-size:30px; border-radius: 10px;">Submit</button>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="dailycount" id="dailycount" type="number"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your daily count'" placeholder="Daily Count">
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Submit</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            
+            
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="box snake mb-30">
                         <div></div>
                         <div>
-                            <div>
-                                <h1>Count </h3>
+                            <div >
+                                <h1 style="color:white; font-size: 40px;">Count </h3>
                             </div>
                         </div>
                     </div>
@@ -125,7 +124,7 @@
                         <div></div>
                         <div>
                             <div>
-                                <h1>{{count}}</h3>
+                                <h1 style="color:white; font-size: 40px;">{{count}}</h3>
                             </div>
                         </div>
                     </div>
@@ -135,7 +134,7 @@
                         <div></div>
                         <div>
                             <div>
-                                <h1>Calories </h3>
+                                <h1 style="color:white; font-size: 40px;">Calories </h3>
                             </div>
                         </div>
                     </div>
@@ -145,10 +144,11 @@
                         <div></div>
                         <div>
                             <div>
-                                <h1>{{calories}}</h3>
+                                <h1 style="color:white; font-size: 40px;">{{calories}} </h3>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>

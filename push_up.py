@@ -67,4 +67,3 @@ def pushup(n):
         
     return count,calories
 
-print(pushup(5))
