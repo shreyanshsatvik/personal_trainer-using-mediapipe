@@ -66,4 +66,3 @@ def pullup(n):
         
         
     return count,calories
-pullup(3)

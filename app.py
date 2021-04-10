@@ -11,6 +11,7 @@ import mediapipe as mp
 
 
 
+
 # def gen_frames():  
 #     camera = cv2.VideoCapture(0)
 #     while True:
@@ -34,10 +35,13 @@ def home():
 
 @app.route('/squats',methods=["POST","GET"])
 def squats():
+    count=0
+    calories=0
     from squats import squats
-    count,calories = squats(5)
-    print("Count",count)
-    print("Calories",calories)
+    if request.method=="POST":
+        n=request.form['dailycount']
+        count,calories = squats(n)
+    
 
     return render_template('squats.html',count = count,calories = calories)
 
@@ -54,11 +58,16 @@ def pushups():
     return render_template('pushup.html',count = count,calories = calories)
 
 @app.route('/pullup',methods=["POST","GET"])
-def pullups():
-    from pull_up import pullup
-    count,calories = pullup(5)
-    print("Count",count)
-    print("Calories",calories)
+def pullup():
+    count=0
+    calories=0
+    if request.method=="POST":
+        from pull_up import pullup
+        print("started")
+        n=request.form.get('co')
+        print(n)
+        count,calories = pullup(int(n))
+    
     return render_template('pullup.html',count = count,calories = calories)
 @app.route('/biceps',methods=["POST","GET"])
 def biceps():
