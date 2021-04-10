@@ -7,7 +7,7 @@ import math
 
 
 pTime = 0
-path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pushup3.mp4'
+path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pullup1.mp4'
 cap = cv2.VideoCapture(path)
 detector = pm.poseDetector()
 
@@ -28,15 +28,14 @@ f=0
 while True:
     success, img = cap.read()
     img = detector.findPose(img)
-    lmlist = detector.getPosition(img,draw=True)
+    lmlist = detector.getPosition(img,draw=False)
     #print(lmlist[3])
-    # if u want all dots then put draw= true and comment out the cv2.circle part in the if part below
     
     if len(lmlist)!=0:
         cv2.circle(img,(lmlist[15][1],lmlist[15][2]),10,(0,0,255),cv2.FILLED)
         cv2.circle(img,(lmlist[3][1],lmlist[3][2]),10,(0,0,255),cv2.FILLED) 
-        y1 = lmlist[14][2]
-        y2 = lmlist[3][2]
+        y1 = lmlist[3][2]
+        y2 = lmlist[20][2]
         
         length = y2-y1
         if length>=0 and f==0:
