@@ -9,7 +9,7 @@ import os
 from push_up import pushup
 from pull_up import pullup
 
-app=Flask(name)
+app=Flask(__name__)
 app.config["DEBUG"]= True
 
 @app.route('/',methods=["POST","GET"])
@@ -19,24 +19,27 @@ def home():
 
 @app.route('/squats',methods=["POST","GET"])
 def squats():
+    return render_template("squats.html")
+
 
 @app.route('/pushup',methods=["POST","GET"])
 def pushups():
-
+    pass
 @app.route('/pullups',methods=["POST","GET"])
 def pullups():
-
+    pass
 @app.route('/biceps',methods=["POST","GET"])
 def biceps():
+    pass
 
 @app.route('/crunches',methods=["POST","GET"])
 def crunches():
-
+    pass
 
 @app.route('/',methods=["POST","GET"])
 def pushup():
+    pass
 
-
-if name == 'main': 
+if __name__ == '__main__': 
 
     app.run()
