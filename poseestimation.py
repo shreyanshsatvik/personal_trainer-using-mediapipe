@@ -2,10 +2,10 @@ import cv2
 import mediapipe as mp
 import os
 import time
-path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'video1.mp4'
+path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'squats1.mp4'
 
 mpPose = mp.solutions.pose
-pose = mpPose.Pose()
+pose = mpPose.Pose(static_image_mode=False,  upper_body_only =False, min_detection_confidence=0.5)
 mpDraw = mp.solutions.drawing_utils
 
 

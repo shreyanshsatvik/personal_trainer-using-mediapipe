@@ -5,7 +5,7 @@ import time
 
 
 class poseDetector():
-    def __init__(self,mode= False, upBody =False,smooth = True,detectionCon = 0.5,trackCon=0.5):
+    def __init__(self,mode= False, upBody =True,smooth = True,detectionCon = 0.5,trackCon=0.5):
             
 
                 self.mode = mode
@@ -17,7 +17,7 @@ class poseDetector():
                 self.mpDraw = mp.solutions.drawing_utils
 
                 self.mpPose = mp.solutions.pose
-                self.pose = self.mpPose.Pose()
+                self.pose = self.mpPose.Pose(static_image_mode=False,  upper_body_only =False, min_detection_confidence=0.5)
                 
 
 
@@ -52,7 +52,7 @@ class poseDetector():
 
 def main():
     pTime = 0
-    path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'video1.mp4'
+    path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'squats1.mp4'
     cap = cv2.VideoCapture(path)
     detector = poseDetector()
     
@@ -64,12 +64,13 @@ def main():
         lmlist = detector.getPosition(img,draw=False)
         if(len(lmlist)!=0):
             print(lmlist[14])
-        cv2.circle(img,(lmlist[14][1],lmlist[14][2]),10,(0,0,255),cv2.FILLED)
+            cv2.circle(img,(lmlist[14][1],lmlist[14][2]),10,(0,0,255),cv2.FILLED)
         cTime = time.time()
         fps = 1/(cTime-pTime)
         pTime = cTime
         cv2.putText(img,str(int(fps)),(70,50),cv2.FONT_HERSHEY_PLAIN,3,
         (255,0,0),3)
+        img = cv2.resize(img, (1100,1100))
         cv2.imshow("Image",img)
         cv2.waitKey(1)
 
