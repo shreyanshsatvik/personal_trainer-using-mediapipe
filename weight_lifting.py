@@ -8,7 +8,7 @@ import math
 
 pTime = 0
 path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'weight lifting 1.mp4'
-cap = cv2.VideoCapture(path)
+cap = cv2.VideoCapture(0)
 detector = pm.poseDetector()
 
 #up3 y500

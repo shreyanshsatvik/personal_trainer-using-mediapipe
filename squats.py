@@ -8,7 +8,7 @@ import math
 
 pTime = 0
 path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'squats3.mp4'
-cap = cv2.VideoCapture(path)
+cap = cv2.VideoCapture(0)
 detector = pm.poseDetector()
 
 #up3 y500
@@ -42,7 +42,7 @@ while True:
         length = y2-y1
         if length>=0 and f==0:
             f=1
-        elif length<0 and f==1:
+        elif length<-50 and f==1:
             f=0
             count=count+1
 

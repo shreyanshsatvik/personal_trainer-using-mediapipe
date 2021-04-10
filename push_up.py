@@ -33,7 +33,7 @@ while True:
     
     if len(lmlist)!=0:
         cv2.circle(img,(lmlist[14][1],lmlist[14][2]),10,(0,0,255),cv2.FILLED)
-        cv2.circle(img,(lmlist[3][1],lmlist[3][2]),10,(0,0,255),cv2.FILLED) 
+        cv2.circle(img,(lmlist[0][1],lmlist[0][2]),10,(0,0,255),cv2.FILLED) 
         y1 = lmlist[14][2]
         y2 = lmlist[0][2]
         
