@@ -1,0 +1,21 @@
+HTTrack3.49-2 launched on Sat, 10 Apr 2021 11:04:52 at https://colorlib.com/preview/#yogafun
+(winhttrack https://colorlib.com/preview/#yogafun -O "/home/shreyanshsatvik/websites/final-ISTE-web" -%v )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:04:59	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link primary/robots.txt (from primary/primary)
+11:04:59	Warning: 	Retry after error -5 (Unable to get server's address: Temporary failure in name resolution) at link primary/yogafun (from primary/primary)
+11:05:05	Warning: 	Retry after error -5 (Unable to get server's address: unknown error) at link primary/yogafun (from primary/primary)
+11:05:05	Error: 	"Not Found" (404) at link https://colorlib.com/preview/assets/fonts/glyphicons-halflings-regular.eot (from https://colorlib.com/preview/assets/css/bootstrap.min.css)
+11:05:05	Error: 	"Not Found" (404) at link https://colorlib.com/preview/assets/fonts/glyphicons-halflings-regular.eot? (from https://colorlib.com/preview/assets/css/bootstrap.min.css)
+11:05:05	Error: 	"Not Found" (404) at link https://colorlib.com/preview/assets/fonts/glyphicons-halflings-regular.woff2 (from https://colorlib.com/preview/assets/css/bootstrap.min.css)
+11:05:05	Error: 	"Not Found" (404) at link https://colorlib.com/preview/assets/fonts/glyphicons-halflings-regular.woff (from https://colorlib.com/preview/assets/css/bootstrap.min.css)
+11:05:05	Error: 	"Not Found" (404) at link https://colorlib.com/preview/assets/fonts/glyphicons-halflings-regular.ttf (from https://colorlib.com/preview/assets/css/bootstrap.min.css)
+11:05:05	Error: 	"Not Found" (404) at link https://colorlib.com/preview/assets/fonts/glyphicons-halflings-regular.svg (from https://colorlib.com/preview/assets/css/bootstrap.min.css)
+11:05:05	Error: 	"Unable to get server's address: unknown error" (-5) after 2 retries at link primary/yogafun (from primary/primary)
+
+HTTrack Website Copier/3.49-2 mirror complete in 13 seconds : 17 links scanned, 6 files written (424789 bytes overall) [78199 bytes received at 6015 bytes/sec], 422382 bytes transferred using HTTP compression in 12 files, ratio 14%, 6.5 requests per connection
+(8 errors, 2 warnings, 0 messages)
