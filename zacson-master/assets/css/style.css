@@ -4279,6 +4279,9 @@ hr {
 /* line 23, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_services_section.scss */
 .services-area .single-services .features-icon img {
   display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
 }
 
 /* line 27, C:/Users/HP/Desktop/July-HTML/292 Health coach/assets/scss/_services_section.scss */
