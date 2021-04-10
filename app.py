@@ -78,6 +78,10 @@ def crunches():
     print("Calories",calories)
     return render_template('crunches.html',count = count,calories = calories)
 
+@app.route('/count',methods=["POST","GET"])
+def count():
+    return render_template('count.html')
+
 if __name__ == '__main__': 
 
     app.run()
