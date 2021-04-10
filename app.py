@@ -39,7 +39,7 @@ def squats():
     print("Count",count)
     print("Calories",calories)
 
-    return render_template('squats.html')
+    return render_template('squats.html',count = count,calories = calories)
 
 # @app.route('/video_feed')
 # def video_feed():
@@ -51,7 +51,7 @@ def pushups():
     count,calories = pushup()
     print("Count",count)
     print("Calories",calories)
-    return render_template('pushup.html')
+    return render_template('pushup.html',count = count,calories = calories)
 
 @app.route('/pullup',methods=["POST","GET"])
 def pullups():
@@ -59,7 +59,7 @@ def pullups():
     count,calories = pullup()
     print("Count",count)
     print("Calories",calories)
-    return render_template('pullup.html')
+    return render_template('pullup.html',count = count,calories = calories)
 @app.route('/biceps',methods=["POST","GET"])
 def biceps():
     from weight_lifting import biceps
@@ -67,7 +67,7 @@ def biceps():
     print("Count",count)
     print("Calories",calories)
 
-    return render_template('weight_lifting.html')
+    return render_template('weight_lifting.html',count = count,calories = calories)
 
 
 @app.route('/crunches',methods=["POST","GET"])
