@@ -25,6 +25,7 @@ def pushup():
     count = 0
 
     f=0
+
     while True:
         success, img = cap.read()
         img = detector.findPose(img)
@@ -45,16 +46,24 @@ def pushup():
                 count=count+1
 
 
-            print(length)
+            #print(length)
 
             cTime = time.time()
             fps = 1/(cTime-pTime)
             pTime = cTime
             cv2.putText(img,str(int(count)),(70,150),cv2.FONT_HERSHEY_PLAIN,10,
             (60,100,255),3)
-            img = cv2.resize(img, (1100,1100))                    # Resize image
+            img = cv2.resize(img, (600,600))                    # Resize image
             cv2.imshow("Image",img)
-            cv2.waitKey(1)
+            
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                cv2.destroyAllWindows()
+                break
+            
+            
             calories = 0.29*count
-            return count,calories
+        
+        
+        
+    return count,calories
 

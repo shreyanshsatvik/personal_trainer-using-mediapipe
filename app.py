@@ -6,8 +6,10 @@ import datetime
 import os.path
 from flask import Markup
 import os
-from push_up import pushup
+
 from pull_up import pullup
+import cv2
+import mediapipe as mp
 
 app=Flask(__name__)
 app.config["DEBUG"]= True
@@ -19,7 +21,13 @@ def home():
 
 @app.route('/squats',methods=["POST","GET"])
 def squats():
-    return render_template("squats.html")
+    from push_up import pushup
+    count,calories = pushup()
+    print("Count",count)
+    print("Calories",calories)
+
+    return render_template('squats.html')
+
 
 
 @app.route('/pushup',methods=["POST","GET"])
