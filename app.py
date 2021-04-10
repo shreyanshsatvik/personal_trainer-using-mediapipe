@@ -21,8 +21,8 @@ def home():
 
 @app.route('/squats',methods=["POST","GET"])
 def squats():
-    from push_up import pushup
-    count,calories = pushup()
+    from squats import squats
+    count,calories = squats()
     print("Count",count)
     print("Calories",calories)
 
@@ -32,21 +32,36 @@ def squats():
 
 @app.route('/pushup',methods=["POST","GET"])
 def pushups():
-    pass
-@app.route('/pullups',methods=["POST","GET"])
+    from push_up import pushup
+    count,calories = pushup()
+    print("Count",count)
+    print("Calories",calories)
+    return render_template('pushup.html')
+
+@app.route('/pullup',methods=["POST","GET"])
 def pullups():
-    pass
+    from pull_up import pullup
+    count,calories = pullup()
+    print("Count",count)
+    print("Calories",calories)
+    return render_template('pullup.html')
 @app.route('/biceps',methods=["POST","GET"])
 def biceps():
-    pass
+    from weight_lifting import biceps
+    count,calories = biceps()
+    print("Count",count)
+    print("Calories",calories)
+
+    return render_template('weight_lifting.html')
+
 
 @app.route('/crunches',methods=["POST","GET"])
 def crunches():
-    pass
-
-@app.route('/',methods=["POST","GET"])
-def pushup():
-    pass
+    from crunches import crunches
+    count,calories = crunches()
+    print("Count",count)
+    print("Calories",calories)
+    return render_template('crunches.html',count = count,calories = calories)
 
 if __name__ == '__main__': 
 

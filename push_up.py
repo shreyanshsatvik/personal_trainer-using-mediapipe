@@ -57,7 +57,7 @@ def pushup():
             cv2.imshow("Image",img)
             
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                cv2.destroyAllWindows()
+                # cv2.destroyAllWindows()
                 break
             
             

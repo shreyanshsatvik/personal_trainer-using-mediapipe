@@ -53,8 +53,16 @@ def pullup():
             pTime = cTime
             cv2.putText(img,str(int(count)),(70,150),cv2.FONT_HERSHEY_PLAIN,10,
             (60,100,255),3)
-            img = cv2.resize(img, (1100,1100))                    # Resize image
+            img = cv2.resize(img, (600,600))                    # Resize image
             cv2.imshow("Image",img)
-            cv2.waitKey(1)
-            calories = 1*count
-            return count,calories
+            
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                # cv2.destroyAllWindows()
+                break
+            
+            
+            calories = 0.29*count
+        
+        
+        
+    return count,calories
