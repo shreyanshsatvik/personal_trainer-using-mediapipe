@@ -8,7 +8,7 @@ import math
 
 pTime = 0
 path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pushup1.mp4'
-cap = cv2.VideoCapture(path)
+cap = cv2.VideoCapture(0)
 detector = pm.poseDetector()
 
 #up3 y500
@@ -35,7 +35,7 @@ while True:
         cv2.circle(img,(lmlist[14][1],lmlist[14][2]),10,(0,0,255),cv2.FILLED)
         cv2.circle(img,(lmlist[3][1],lmlist[3][2]),10,(0,0,255),cv2.FILLED) 
         y1 = lmlist[14][2]
-        y2 = lmlist[3][2]
+        y2 = lmlist[0][2]
         
         length = y2-y1
         if length>=0 and f==0:
