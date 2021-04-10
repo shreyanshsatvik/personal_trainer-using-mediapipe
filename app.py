@@ -39,8 +39,8 @@ def squats():
     calories=0
     from squats import squats
     if request.method=="POST":
-        n=request.form['dailycount']
-        count,calories = squats(n)
+        n=request.form.get('co')
+        count,calories = squats(int(n))
     
 
     return render_template('squats.html',count = count,calories = calories)
@@ -52,9 +52,15 @@ def squats():
 @app.route('/pushup',methods=["POST","GET"])
 def pushups():
     from push_up import pushup
-    count,calories = pushup(5)
-    print("Count",count)
-    print("Calories",calories)
+    count=0
+    calories=0
+    if request.method=="POST":
+        
+        print("started")
+        n=request.form.get('co')
+        print(n)
+        count,calories = pushup(int(n))
+    
     return render_template('pushup.html',count = count,calories = calories)
 
 @app.route('/pullup',methods=["POST","GET"])
@@ -69,22 +75,34 @@ def pullup():
         count,calories = pullup(int(n))
     
     return render_template('pullup.html',count = count,calories = calories)
+
 @app.route('/biceps',methods=["POST","GET"])
 def biceps():
-    from weight_lifting import biceps
-    count,calories = biceps(5)
-    print("Count",count)
-    print("Calories",calories)
-
+    
+    count=0
+    calories=0
+    if request.method=="POST":
+        from weight_lifting import biceps
+        print("started")
+        n=request.form.get('co')
+        print(n)
+        count,calories = biceps(int(n))
+    
     return render_template('weight_lifting.html',count = count,calories = calories)
 
 
 @app.route('/crunches',methods=["POST","GET"])
 def crunches():
     from crunches import crunches
-    count,calories = crunches(5)
-    print("Count",count)
-    print("Calories",calories)
+    ccount=0
+    calories=0
+    if request.method=="POST":
+        print("started")
+        n=request.form.get('co')
+        print(n)
+        count,calories = crunches(int(n))
+    
+    
     return render_template('crunches.html',count = count,calories = calories)
 
 @app.route('/count',methods=["POST","GET"])
