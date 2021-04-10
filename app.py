@@ -6,7 +6,6 @@ import datetime
 import os.path
 from flask import Markup
 import os
-from flask_mysqldb import MySQL
 
 app=Flask(__name__)
 app.config["DEBUG"]= True
