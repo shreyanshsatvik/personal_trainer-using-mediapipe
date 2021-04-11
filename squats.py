@@ -8,6 +8,8 @@ import math
 def squats(n):
     pTime = 0
     path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'squats3.mp4'
+    windowname = "OpenCV Media Player"
+    cv2.namedWindow(windowname)
     cap = cv2.VideoCapture(0)
     detector = pm.poseDetector()
 
@@ -52,19 +54,24 @@ def squats(n):
             cTime = time.time()
             fps = 1/(cTime-pTime)
             pTime = cTime
-            cv2.putText(img,"Total Number of Pushups  "+str(int(count)),(70,250),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Total Number of Squats  "+str(int(count)),(70,50),cv2.FONT_HERSHEY_DUPLEX,1,
             (60,100,255),3)
-            cv2.putText(img,"Calories Burnt  "+str(int(count)*0.32),(70,350),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Calories Burnt  "+str(int(count)*0.32),(70,150),cv2.FONT_HERSHEY_DUPLEX,1,
             (60,100,255),3)
-            img = cv2.resize(img, (600,600))                    # Resize image
+            #img = cv2.resize(img, (900,900))                    # Resize image
             cv2.imshow("Image",img)
-            
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            calories = 0.32*count
+            if cv2.waitKey(1) and count>=n:
                 # cv2.destroyAllWindows()
+                cap.release()
+                cv2.destroyAllWindows()
                 break
             
             
-            calories = 0.32*count
+            
+        
+        #cv2.destroyWindow(windowname)
+        
         
         
         

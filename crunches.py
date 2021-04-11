@@ -25,7 +25,7 @@ def crunches(n):
     count = 0
 
     f=0
-    while True and count<n:
+    while True & count<n:
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img)
@@ -57,8 +57,8 @@ def crunches(n):
             img = cv2.resize(img, (600,600))                    # Resize image
             cv2.imshow("Image",img)
             
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                # cv2.destroyAllWindows()
+            if cv2.waitKey(1) & 0xFF == ord('q') :
+                cv2.destroyWindows()
                 break
             
             

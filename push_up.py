@@ -58,8 +58,10 @@ def pushup(n):
             img = cv2.resize(img, (800,800))                    # Resize image
             cv2.imshow("Image",img)
             
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            if cv2.waitKey(1) and count>=n:
                 # cv2.destroyAllWindows()
+                cap.release()
+                cv2.destroyAllWindows()
                 break
             
             

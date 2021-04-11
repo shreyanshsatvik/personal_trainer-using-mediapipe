@@ -25,7 +25,7 @@ def biceps(n):
     count = 0
 
     f=0
-    while True and count<n:
+    while True :
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img, draw= False)
@@ -54,15 +54,18 @@ def biceps(n):
             (60,100,255),3)
             cv2.putText(img,"Calories Burnt  "+str(int(count)*0.4),(70,350),cv2.FONT_HERSHEY_DUPLEX,3,
             (60,100,255),3)
-            img = cv2.resize(img, (600,600))                    # Resize image
+            # img = cv2.resize(img, (600,600))                    # Resize image
             cv2.imshow("Image",img)
-            
-            if cv2.waitKey(1) & 0xFF == ord('q'):
+            calories = 0.4*count
+            if cv2.waitKey(1) and count>n:
                 # cv2.destroyAllWindows()
+                cap.release()
+                cv2.destroyAllWindows()
                 break
             
             
-            calories = 0.4*count
+            
+        
         
         
         
