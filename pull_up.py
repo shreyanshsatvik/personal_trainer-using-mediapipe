@@ -26,6 +26,7 @@ def pullup(n):
     count = 0
 
     f=0
+    time.sleep(5)
     while True and count<n:
         success, img = cap.read()
         img = detector.findPose(img)
@@ -51,7 +52,7 @@ def pullup(n):
             cTime = time.time()
             fps = 1/(cTime-pTime)
             pTime = cTime
-            cv2.putText(img,"Total Number of Pushups  "+str(int(count)),(70,250),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Total Number of Pullups  "+str(int(count)),(70,250),cv2.FONT_HERSHEY_DUPLEX,3,
             (60,100,255),3)
             cv2.putText(img,"Calories Burnt  "+str(int(count)*1),(70,350),cv2.FONT_HERSHEY_DUPLEX,3,
             (60,100,255),3)

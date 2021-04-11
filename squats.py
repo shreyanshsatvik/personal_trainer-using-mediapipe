@@ -27,6 +27,7 @@ def squats(n):
     count = 0
 
     f=0
+    time.sleep(5)
     while True and count < n:
         success, img = cap.read()
         img = detector.findPose(img)

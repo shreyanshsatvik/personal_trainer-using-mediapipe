@@ -25,11 +25,13 @@ def biceps(n):
     count = 0
 
     f=0
+    time.sleep(5)
     while True :
         success, img = cap.read()
         img = detector.findPose(img)
         lmlist = detector.getPosition(img, draw= False)
         #print(lmlist[3])
+        
         
         if len(lmlist)!=0:
             cv2.circle(img,(lmlist[17][1],lmlist[17][2]),20,(0,0,255),cv2.FILLED)
@@ -50,9 +52,9 @@ def biceps(n):
             cTime = time.time()
             fps = 1/(cTime-pTime)
             pTime = cTime
-            cv2.putText(img,"Total Number of Pushups  "+str(int(count)),(70,250),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Total Number of bicep curls  "+str(int(count)),(70,50),cv2.FONT_HERSHEY_DUPLEX,1,
             (60,100,255),3)
-            cv2.putText(img,"Calories Burnt  "+str(int(count)*0.4),(70,350),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Calories Burnt  "+str(int(count)*0.32),(70,150),cv2.FONT_HERSHEY_DUPLEX,1,
             (60,100,255),3)
             # img = cv2.resize(img, (600,600))                    # Resize image
             cv2.imshow("Image",img)

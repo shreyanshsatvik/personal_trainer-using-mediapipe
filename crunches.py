@@ -25,6 +25,7 @@ def crunches(n):
     count = 0
 
     f=0
+    time.sleep(5)
     while True & count<n:
         success, img = cap.read()
         img = detector.findPose(img)
@@ -50,9 +51,9 @@ def crunches(n):
             cTime = time.time()
             fps = 1/(cTime-pTime)
             pTime = cTime
-            cv2.putText(img,"Total Number of Pushups  "+str(int(count)),(70,250),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Total Number of Crunches  "+str(int(count)),(70,50),cv2.FONT_HERSHEY_DUPLEX,1,
             (60,100,255),3)
-            cv2.putText(img,"Calories Burnt  "+str(int(count)*0.15),(70,350),cv2.FONT_HERSHEY_DUPLEX,3,
+            cv2.putText(img,"Calories Burnt  "+str(int(count)*0.32),(70,150),cv2.FONT_HERSHEY_DUPLEX,1,
             (60,100,255),3)
             img = cv2.resize(img, (600,600))                    # Resize image
             cv2.imshow("Image",img)
