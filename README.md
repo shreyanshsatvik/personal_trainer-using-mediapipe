@@ -3,7 +3,7 @@
 
 ## Personal Trainer using mediapipe. A web app that will help you to motivate for your daily exercises and keeps count of different exercises done daily and will tell you the amount of calories burnt using that exercise using opencv and mediapipe .
 
-<h3>App Mode</h3>
+<h3>App Mode :- </h3>
 * Pushups<br>
 * Pullups<br>
 * Squats<br>
