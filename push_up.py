@@ -7,7 +7,7 @@ import math
 
 def pushup(n):
     pTime = 0
-    path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pushup1.mp4'
+    path = os.path.dirname(os.path.realpath(__file__))+'/videos/'+'pushup2.mp4'
     cap = cv2.VideoCapture(path)
     detector = pm.poseDetector()
 
