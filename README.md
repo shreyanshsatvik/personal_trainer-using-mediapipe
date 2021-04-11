@@ -20,7 +20,7 @@ Squats Live Demo :-
 <br>
 <img align="center" src="https://github.com/shreyanshsatvik/personal-trainer/blob/main/Gif/squats.gif"  />
 <br />
-Cruches Demo :- 
+Crunches Demo :- 
 <br />
 <img align ="center" src="https://github.com/shreyanshsatvik/personal-trainer/blob/main/Gif/crunches.gif" />
 <br />
