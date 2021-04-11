@@ -68,7 +68,6 @@ def squats(n):
                 break
             
             
-            
         
         #cv2.destroyWindow(windowname)
         
