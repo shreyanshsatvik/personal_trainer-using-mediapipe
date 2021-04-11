@@ -11,12 +11,16 @@ Steps to run the repository:-
 3. In commpand prompt type python app.py
 4. Now your personal trainer is ready just choose an exercise and enter the number of counts for that exercise . 
 
+Pushups Demo:-
 <img align="center" src="https://github.com/shreyanshsatvik/personal-trainer/blob/main/Gif/pushups.gif"  />
 
+Squats Live Demo :-
 <img align="center" src="https://github.com/shreyanshsatvik/personal-trainer/blob/main/Gif/squats.gif"  />
 
+Cruches Demo :- 
 <img align ="center" src="https://github.com/shreyanshsatvik/personal-trainer/blob/main/Gif/crunches.gif" />
 
-![image](https://user-images.githubusercontent.com/52126313/114305951-dbca4d00-9af7-11eb-8b54-86caf9c2d9ca.png)
-![image](https://user-images.githubusercontent.com/52126313/114305958-e2f15b00-9af7-11eb-9a26-bb6a19d96088.png)
-![image](https://user-images.githubusercontent.com/52126313/114305964-e8e73c00-9af7-11eb-91ae-5564af666501.png)
+
+**Made with :heart:** 
+              **-BiraVirus** 
+
